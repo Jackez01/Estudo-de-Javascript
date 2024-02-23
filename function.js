@@ -1,6 +1,6 @@
 //funções
 // soma
-
+/*
 const sum = function (number1, number2) {
   let total = number1 + number2
   return total
@@ -151,14 +151,14 @@ console.log(phraseWithUnderScore)
   // adicionando no começo
   techs.unshift("sql")
   //remover do fim - se usar essa função mais de uma vez vai continuar removendo
-  //techs.pop()
+  techs.pop()
   //remover do começo
-  //techs.shift()
+  techs.shift()
   //pegar somente algum elemento do array
-  //console.log(techs.slice(1, 3))
+  console.log(techs.slice(1, 3))
 
   //remover 1 ou mais itens (qual vc quer tirar, depois quantos quer tirar)
-  //techs.splice(1, 1)
+  techs.splice(1, 1)
 
   //encontrar a posição de um elemento no array
   let index = techs.index0f('html')  
