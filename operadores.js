@@ -101,3 +101,12 @@ let age = 20
 const canDrive = age >= 18 ? 'can drive' : 'cant drive'
 
 console.log(canDrive)
+
+//concatenação
+let alpha = 'alpha'
+console.log('alpha' + 'bet')
+
+//Falsy (quando um valor é considerado false em contextos onde um booleano é obrigatorio
+//como: false, 0, -0, "", null, undefined, nan) e truthy ( é o inverso: true, {}, [], 1, -1, infinity, -infinity)
+console.log(NaN ? 'verdadeiro' : 'falso')
+console.log(true ? 'verdadeiro' : 'falso')
