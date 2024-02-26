@@ -1,5 +1,5 @@
 // new - serve para criar um objeto
-/*
+
 let date = new Date ('2020-12-01')
 console.log(date.__proto__)
 
@@ -87,7 +87,7 @@ let queijo = true
 console.log(presunto && queijo)
 console.log(presunto || queijo)
 console.log(!queijo)
-*/
+
 //Operador condicional (ternário)
 //condição então valor 1 se não valor 2
 //condition ? value1 : value2
@@ -110,3 +110,121 @@ console.log('alpha' + 'bet')
 //como: false, 0, -0, "", null, undefined, nan) e truthy ( é o inverso: true, {}, [], 1, -1, infinity, -infinity)
 console.log(NaN ? 'verdadeiro' : 'falso')
 console.log(true ? 'verdadeiro' : 'falso')
+
+
+//CONTROL FLOW
+//if e else
+
+let temperature = 36
+
+if(temperature >= 37.5) {
+  console.log('Febre alta')
+} else if (temperature < 37.5 && temperature >= 37) {
+  console.log('Febre')
+}
+ else {
+  console.log('Saudavel')
+}
+// OU
+let temperature = 38
+let hightemperature = temperature >= 37.5
+let mediumtemperature = temperature < 37.5 && temperature >= 37
+
+if (hightemperature) {
+console.log ('Febre alta')
+}
+else if (mediumtemperature) {
+  console.log ('Febre moderada')
+}
+else {
+  console.log('Saudavel')
+}
+
+
+//Switch
+function calculate (number1, operator, number2) {
+let result 
+
+  switch (operator) {
+    case '+':
+      result = number1 + number2
+      break
+
+      case '-':
+        result = number1 - number2
+        break
+
+        case '*':
+      result = number1 * number2
+      break
+
+      case '/':
+      result = number1 / number2
+      break
+
+      default: 
+      console.log('não implementado')
+      break
+  }
+
+  return result
+}
+
+console.log(calculate(4, '+', 10))
+
+//Throw
+function sayMyName (name = ''){
+  if (name === '') {
+  throw 'Nome é obrigatório'
+  }
+  
+  console.log(name)
+}
+//try... catch
+try {
+  sayMyName('Lucas')
+} catch(e) {
+  console.log(e)
+}
+
+console.log('após o try/catch')
+
+//ESTRUTURAS DE REPETIÇÃO
+//for
+
+for (let i = 10; i > 0; i--) {
+  if (i===5) {
+    //o continue pula algo, mas pode substituir pelo break para que pare em determinado momento
+    continue;
+  }
+  console.log(i)
+}
+
+//While
+let i = 0
+while(i < 10) {
+  console.log(i)
+  i++
+}
+
+//For of
+
+let name = 'Lucas'
+let names = ['Pedro', 'joão', 'Paulo']
+
+for (let name of names) {
+  console.log(name)
+}
+
+//for in - criar um loop em cima de um objeto
+
+let person = {
+  name: 'John',
+  age: 30,
+  weight: 70
+}
+
+for(let property in person) {
+  console.log(property)
+  console.log(person[property])
+}
