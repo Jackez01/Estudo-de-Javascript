@@ -1,5 +1,5 @@
 // Lista de alunos
-const students = [
+const listStudents = [
   {
   name: "Lucas",
   scoreOne: 6,
@@ -21,19 +21,17 @@ const students = [
 
 
 // função de média
-function media (scoreOne, scoreTwo) {
-  return ((scoreOne + scoreTwo) / 2).toFixed(2)
+function calculaMedia (scoreOne, scoreTwo) {
+  let media = (scoreOne + scoreTwo) / 2
+  return media
 }
 
-function printScore(student) {
-  return `O estudante ${student.name} ficou com a média de: ${media}`
-}
 
 // aprovado ou reprovado
-for (students = 0; students <= 3; students++) {
-  if  (media < 7) {
-    alert (`Está reprovado!`)
-  } else {
-    alert(`Está aprovado`)
-  }
+for (let student of listStudents) {
+  mediaIndividual = calculaMedia (student.scoreOne, student.scoreTwo)
+  let aprovadoOuNao =   mediaIndividual < 7 ? `Infelizmente não foi dessa vez.` : `Parabéns pela aprovação`
+
+  alert (`A média de ${student.name} é ${mediaIndividual} 
+  ${aprovadoOuNao}`)
 }
